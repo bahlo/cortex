@@ -111,7 +111,7 @@ header {
   padding: 16px;
 }
 
-.content > h1 {
+.content > h1, .content > h2:first-child {
   margin-top: 0;
 }
 

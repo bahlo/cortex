@@ -112,6 +112,10 @@ header {
   padding: 32px;
 }
 
+.content > h1 {
+  margin-top: 0;
+}
+
 a {
   text-decoration: none;
   cursor: pointer;

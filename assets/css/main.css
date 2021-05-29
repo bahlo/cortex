@@ -85,6 +85,10 @@ header {
   margin: 0;
 }
 
+.permalink {
+  color: inherit;
+}
+
 #logo {
   display: inline-block;
   display: flex;

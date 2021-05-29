@@ -70,6 +70,14 @@ p {
 
 code {
   font-family: 'Iosevka Web', monospace;
+  background: #f5f5f5;
+  padding: 2px 4px 4px;
+  border-radius: 6px;
+}
+
+.chroma.chroma {
+  background: #f5f5f5;
+  border-radius: 6px;
 }
 
 header {

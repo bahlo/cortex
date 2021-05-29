@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-</head>
-<body>
-  <header>
-    {{ $logo := resources.Get "img/logo.png" }} <a href=
-    "/" id="logo"><img src="{{ $logo.Permalink }}" alt=
-    "Arne Bahlo">
-    <h3 class="site-title">{{.Site.Title}}</h3></a>
-  </header>
-</body>
-</html>
+<header>
+  {{ $logo := resources.Get "img/logo.png" }} 
+  <a href= "/" id="logo">
+    <img src="{{ $logo.Permalink }}" alt="Arne Bahlo">
+    <h3 class="site-title">{{.Site.Title}}</h3>
+  </a>
+</header>

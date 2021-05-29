@@ -5,6 +5,9 @@
       <div class="content">
         <h1>{{ .Title }}</h1>
         {{ .Content }}
+        {{ $slug := strings.TrimPrefix "/posts/" .RelPermalink }}
+        {{ $slug := strings.TrimSuffix "/" $slug }}
+        <small><a href="{{ $.Site.Params.repo }}/edit/main/org/{{ $slug }}.org">Edit this page on GitHub</a></small>
       </div>
       {{ partial "backlinks.html" . }}
       </div>

@@ -1,4 +1,4 @@
-<title>{{ .Title }}</title>
+<title>{{ if not .IsHome }}{{ .Title }} – {{ end }}{{ .Site.Title }}</title>
 
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">

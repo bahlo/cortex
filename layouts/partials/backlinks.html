@@ -1,7 +1,7 @@
 {{ $re := $.File.BaseFileName }}
 {{ $backlinks := slice }}
 {{ range .Site.AllPages }}
-   {{ if and (findRE $re .RawContent) (ne $re .File.BaseFileName) }}
+   {{ if and (findRE $re .RawContent) (and (ne $re .File.BaseFileName) (ne .RelPermalink "/")) }}
       {{ $backlinks = $backlinks | append . }}
    {{ end }}
 {{ end }}

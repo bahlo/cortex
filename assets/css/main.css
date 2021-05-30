@@ -102,6 +102,11 @@ header {
   display: flex;
 }
 
+#logo.active {
+  /* Disable highlighting in logo */
+  background: none;
+}
+
 #logo img {
   width: 30px;
   height: 30px;
@@ -163,6 +168,11 @@ a.active {
 
 a:hover {
   opacity: 0.5;
+}
+
+a svg.external-link-icon {
+  position: relative;
+  top: 2px;
 }
 
 blockquote {

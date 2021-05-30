@@ -71,13 +71,17 @@ p {
 code {
   font-family: 'Iosevka Web', monospace;
   background: #f5f5f5;
-  padding: 2px 4px 4px;
+  border-radius: 6px;
+  padding: 0 2px 2px;
+}
+
+.chroma.chroma, pre {
+  background: #f5f5f5;
   border-radius: 6px;
 }
 
-.chroma.chroma {
-  background: #f5f5f5;
-  border-radius: 6px;
+pre code {
+  padding: 0;
 }
 
 header {

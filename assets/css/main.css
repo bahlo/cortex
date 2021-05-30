@@ -1,3 +1,9 @@
+:root {
+  --link-color: rgb(23, 173, 152);
+  --backlink-color: rgba(23, 173, 152, 0.75);
+  --active-link-background-color: rgba(23, 173, 152, 0.15);
+}
+
 /* Fonts */
 @font-face {
 	font-family: 'Iosevka Web';
@@ -163,11 +169,11 @@ header {
 a {
   text-decoration: none;
   cursor: pointer;
-  color: rgba(10, 132, 255, 1);
+  color: var(--link-color);
 }
 
 a.active {
-  background-color: rgba(10, 132, 255, 0.15);
+  background-color: var(--active-link-background-color);
 }
 
 a:hover {
@@ -237,7 +243,7 @@ iframe {
 
 .backlinks a {
   flex: 100%;
-  color: rgba(10, 132, 255, 0.75);
+  color: var(--backlink-color);
 }
 
 dl {

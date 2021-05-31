@@ -242,7 +242,6 @@ a svg.external-link-icon {
 blockquote {
   margin-left: 1rem;
   font-style: italic;
-  font-family: Georgia, bitstream charter, serif;
   border-left: 3px solid;
   border-left-color: currentcolor;
   border-color: var(--text-color);

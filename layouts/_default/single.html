@@ -5,7 +5,7 @@
       <div class="content">
         <a href="{{ .Permalink}}" alt="{{ .Title }}" class="permalink"><h1>{{ .Title }}</h1></a>
         {{ .Content }}
-        {{ $slug := strings.TrimPrefix "/posts/" .RelPermalink }}
+        {{ $slug := strings.TrimPrefix "/notes/" .RelPermalink }}
         {{ $slug := strings.TrimSuffix "/" $slug }}
         <small><a href="{{ $.Site.Params.repo }}/edit/main/org/{{ $slug }}.org">Edit this page on GitHub</a></small>
       </div>

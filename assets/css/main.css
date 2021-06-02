@@ -152,6 +152,11 @@ code {
   padding: 0 2px 2px;
 }
 
+dd a {
+  /* For some reason goldmark renders a space before the comma, fix it with CSS */
+  margin-right: -4px;
+}
+
 .chroma.chroma, pre {
   background: var(--code-bg);
   border-radius: 6px;

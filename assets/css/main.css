@@ -234,6 +234,7 @@ header {
 
 .page:first-child {
   border-left: 0;
+  margin-right: -4px;
 }
 
 .page:last-child {

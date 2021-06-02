@@ -4,7 +4,7 @@
   --header-bg: #fff;
   --page-bg: #fff;
   --code-bg: #fff;
-  --border-color: #ddd;
+  --border-color: #eee;
   --link-color: rgb(23, 173, 152);
   --backlink-color: rgba(23, 173, 152, 0.75);
   --active-link-background-color: rgba(23, 173, 152, 0.15);
@@ -117,11 +117,11 @@ h6 {
 }
 
 h1 {
+  margin-top: 0;
   margin-bottom: 16px;
 }
 
 h2 {
-  margin-top: 1.5em;
   margin-bottom: 0.5em;
 }
 
@@ -165,8 +165,8 @@ header {
   display: flex;
   align-items: center;
   background: var(--header-bg);
-  border-bottom: 1px var(--border-color) dashed;
-  padding: 8px 16px;
+  border-bottom: 1px var(--border-color) solid;
+  padding: 8px 20px;
 }
 
 .site-title {
@@ -215,7 +215,7 @@ header {
 .page {
   white-space: normal;
   background: var(--page-bg);
-  border-left: 1px solid rgba(0, 0, 0, 0.05);
+  border-left: 1px solid var(--border-color);
   display: inline-block;
   width: 100%;
   max-width: 625px;
@@ -224,6 +224,11 @@ header {
   overflow-y: auto;
   vertical-align: top;
   box-sizing: border-box;
+  margin-right: -5px;
+}
+
+.page:first-child {
+  border-left: 0;
 }
 
 .page:last-child {
@@ -231,7 +236,7 @@ header {
 }
 
 .content {
-  padding: 16px;
+  padding: 20px;
 }
 
 .content > h1, .content > h2:first-child {
@@ -298,7 +303,7 @@ iframe {
 
 .bl-section {
   padding: 1em;
-  border-top: 1px var(--border-color) dashed;
+  border-top: 1px var(--border-color) solid;
 }
 
 .backlinks {

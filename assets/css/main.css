@@ -145,6 +145,10 @@ p {
   margin-bottom: 1em;
 }
 
+p.redirect {
+  padding: 0 16px;
+}
+
 code {
   font-family: 'Iosevka Web', monospace;
   background: var(--code-bg);

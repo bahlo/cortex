@@ -236,7 +236,7 @@ header {
   margin-right: -5px;
 }
 
-.page:first-child {
+.page:first-of-type {
   border-left: 0;
   margin-right: -4px;
 }

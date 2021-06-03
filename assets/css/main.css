@@ -18,7 +18,7 @@
     --code-bg: #2e2a31;
     --header-bg: #222;
     --page-bg: #222;
-    --border-color: #777;
+    --border-color: #333;
   }
 }
 
@@ -233,12 +233,11 @@ header {
   overflow-y: auto;
   vertical-align: top;
   box-sizing: border-box;
-  margin-right: -5px;
 }
 
 .page:first-of-type {
   border-left: 0;
-  margin-right: -4px;
+  margin-right: -5px;
 }
 
 .page:last-child {

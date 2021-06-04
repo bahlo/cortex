@@ -1,0 +1,23 @@
+:root {
+  --fg: #111;
+  --bg: #fafafc;
+  --header-bg: #fff;
+  --page-bg: #fff;
+  --code-bg: #fff;
+  --border-color: #eee;
+  --link-color: rgb(23, 173, 152);
+  --backlink-color: rgba(23, 173, 152, 0.75);
+  --active-link-background-color: rgba(23, 173, 152, 0.15);
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Override for dark mode */
+  :root {
+    --fg: #eee;
+    --bg: #111;
+    --code-bg: #2e2a31;
+    --header-bg: #222;
+    --page-bg: #222;
+    --border-color: #333;
+  }
+}

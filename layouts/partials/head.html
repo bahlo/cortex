@@ -16,5 +16,5 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
 
-{{ $main := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint }}
+{{ $main := resources.Get "scss/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $main.Permalink }}"/>

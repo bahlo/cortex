@@ -1,8 +1,6 @@
 html,
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  display: flex;
-  flex-flow: column;
   background: var(--bg);
   line-height: 1.4;
   width: 100%;
@@ -58,7 +56,7 @@ code {
 }
 
 dd a {
-  /* For some reason goldmark renders a space before the comma, fix it with CSS */
+  // For some reason goldmark renders a space before the comma, fix it with CSS
   margin-right: -4px;
 }
 
@@ -91,6 +89,6 @@ dt + dt {
   padding-right: 60%;
 }
 dt + dt + dd {
-  margin-top: -1.625em; /* own height including padding */
+  margin-top: -1.625em; // own height including padding
   padding-left: calc(30% + 1em);
 }

@@ -1,18 +1,16 @@
 {{define "main"}}
-<div class="grid-container">
-  <div class="grid">
-    <div class="page" data-level="1">
-      <div class="content">
-        <a href="{{ .Permalink}}" alt="{{ .Title }}" class="permalink"><h1>{{ .Title }}</h1></a>
-        {{ .Content }}
-        {{ $slug := strings.TrimPrefix "/notes/" .RelPermalink }}
-        {{ $slug := strings.TrimSuffix "/" $slug }}
-        <small><a href="{{ $.Site.Params.repo }}/edit/main/org/{{ $slug }}.org">Edit this page on GitHub</a></small>
-      </div>
-      {{ partial "backlinks.html" . }}
-      </div>
-   </div>
-</div>
+<div class="grid">
+  <div class="page" data-level="1">
+    <div class="content">
+      <a href="{{ .Permalink}}" alt="{{ .Title }}" class="permalink"><h1>{{ .Title }}</h1></a>
+      {{ .Content }}
+      {{ $slug := strings.TrimPrefix "/notes/" .RelPermalink }}
+      {{ $slug := strings.TrimSuffix "/" $slug }}
+      <small><a href="{{ $.Site.Params.repo }}/edit/main/org/{{ $slug }}.org">Edit this page on GitHub</a></small>
+    </div>
+    {{ partial "backlinks.html" . }}
+    </div>
+ </div>
 {{ $urijs := resources.Get "js/URI.js" }}
 <script src="{{$urijs.Permalink}}" type="text/javascript"></script>
 {{ $pagejs := resources.Get "js/page.js" }}

@@ -4,14 +4,15 @@ let animationLength = 200;
 
 function stackNote(href, level) {
   level = Number(level) || pages.length;
-  href = URI(href);
-  uri = URI(window.location);
-  pages.push(href.path());
-  uri.setQuery("stackedNotes", pages.slice(1, pages.length));
+  pages.push(href);
+
+  const query = new URLSearchParams(window.location.search);
+  query.set("stackedNotes", pages.slice(1, pages.length))
+  const uri = window.location.origin + window.location.pathname + '?' + query.toString()
 
   old_pages = pages.slice(0, level - 1);
   state = { pages: old_pages, level: level };
-  window.history.pushState(state, "", uri.href());
+  window.history.pushState(state, "", uri);
 }
 
 function unstackNotes(level) {
@@ -115,12 +116,17 @@ window.addEventListener("popstate", function (event) {
 });
 
 window.onload = function () {
-  initializePage(document.querySelector(".page"));
+  if (typeof URLSearchParams !== 'function') {
+    // If we don't have URLSearchParams (IE11 for example), don't even bother
+    return
+  }
 
-  let stacks = [];
-  uri = URI(window.location);
-  if (uri.hasQuery("stackedNotes")) {
-    stacks = uri.query(true).stackedNotes;
+  initializePage(document.querySelector('.page'));
+
+  const query = new URLSearchParams(window.location.search);
+  const stackedNotes = query.get('stackedNotes');
+  if (stackedNotes) {
+    const stacks = stackedNotes.split(',');
     if (!Array.isArray(stacks)) {
       stacks = [stacks];
     }

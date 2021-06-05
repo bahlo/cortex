@@ -96,7 +96,7 @@ pre {
   // We want to fade out the content and fade in the title, so we have a 
   // collapsing state. That shows everything with opacity 0
   .collapsed-title, .content, .bl-section {
-    transition: opacity 0.2s ease-in;
+    transition: opacity 0.1s ease-in;
   }
 
   &.collapsing {

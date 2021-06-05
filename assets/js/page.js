@@ -160,11 +160,21 @@ function updateCollapsedState() {
   const titleWidth = 40; // px
 
   for (let i = 0; i < pages.length; i++) {
-    const collapsed = (width * (i+1)) < pages[i].offsetLeft + titleWidth;
-    if (collapsed) {
+    const offsetWidth = (width * (i+1));
+    const collapsedWidth = pages[i].offsetLeft + titleWidth;
+
+    if (offsetWidth < collapsedWidth) {
       pages[i].classList.add("collapsed");
+      pages[i].classList.remove("collapsing");
+      continue
     } else {
       pages[i].classList.remove("collapsed");
+    }
+
+    if (offsetWidth < collapsedWidth + 8) {
+      pages[i].classList.add("collapsing");
+    } else {
+      pages[i].classList.remove("collapsing");
     }
   }
 }

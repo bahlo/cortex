@@ -19,14 +19,6 @@ pre code {
   border-left: 0;
 }
 
-.content {
-  padding: 20px;
-}
-
-.content > h1, .content > h2:first-child {
-  margin-top: 0;
-}
-
 a {
   text-decoration: none;
   cursor: pointer;
@@ -85,17 +77,43 @@ pre {
 
   .collapsed-title {
     display: none;
+    position: absolute;
+    writing-mode: vertical-lr;
+    left: -12px;
+    top: 16px;
+    font-size: 24px;
+    white-space: nowrap;
   }
 
+  .content {
+    padding: 20px;
+  }
+
+  .content > h1, .content > h2:first-child {
+    margin-top: 0;
+  }
+
+  // We want to fade out the content and fade in the title, so we have a 
+  // collapsing state. That shows everything with opacity 0
+  .collapsed-title, .content, .bl-section {
+    transition: opacity 0.2s ease-in;
+  }
+
+  &.collapsing {
+    .collapsed-title {
+      display: block;
+      opacity: 0;
+    }
+
+    .content, .bl-section {
+      opacity: 0;
+    }
+  }
+
+  // In the collapsed state we want to show the title only
   &.collapsed {
     .collapsed-title {
       display: block;
-      writing-mode: vertical-lr;
-      position: absolute;
-      left: -12px;
-      top: 16px;
-      font-size: 24px;
-      white-space: nowrap;
     }
 
     .content, .bl-section  {

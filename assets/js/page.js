@@ -123,30 +123,6 @@ window.addEventListener("popstate", function (event) {
   window.location = window.location; // this reloads the page.
 });
 
-window.onload = function () {
-  if (typeof URLSearchParams !== 'function') {
-    // If we don't have URLSearchParams (IE11 for example), don't even bother
-    return
-  }
-
-  initializePage(document.querySelector('.page'));
-
-  const query = new URLSearchParams(window.location.search);
-  const stackedNotes = query.get('stackedNotes');
-  if (stackedNotes) {
-    const stacks = stackedNotes.split(',');
-    if (!Array.isArray(stacks)) {
-      stacks = [stacks];
-    }
-    for (let i = 0; i < stacks.length; i++) {
-      fetchNote(stacks[i], i + 1);
-    }
-  }
-
-  document.querySelector('.grid')
-    .addEventListener('scroll', debounce(updateCollapsedState), { passive: true });
-};
-
 // The debounce function receives our function as a parameter
 // Thanks to https://css-tricks.com/styling-based-on-scroll-position/
 const debounce = (fn) => {
@@ -185,3 +161,33 @@ function updateCollapsedState() {
     }
   }
 }
+
+window.onload = function () {
+  if (typeof URLSearchParams !== 'function') {
+    // If we don't have URLSearchParams (IE11 for example), don't even bother
+    return
+  }
+
+  if (window.innerWidth <= 640) {
+    // We have a small screen with no need for nice stacking
+    return
+  }
+
+  initializePage(document.querySelector('.page'));
+
+  const query = new URLSearchParams(window.location.search);
+  const stackedNotes = query.get('stackedNotes');
+  if (stackedNotes) {
+    const stacks = stackedNotes.split(',');
+    if (!Array.isArray(stacks)) {
+      stacks = [stacks];
+    }
+    for (let i = 0; i < stacks.length; i++) {
+      fetchNote(stacks[i], i + 1);
+    }
+  }
+
+  document.querySelector('.grid')
+    .addEventListener('scroll', debounce(updateCollapsedState), { passive: true });
+};
+

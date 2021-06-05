@@ -57,7 +57,14 @@ function fetchNote(href, level) {
         function (element, level) {
           element.dataset.level = level + 1;
           initializePage(element, level + 1);
-          element.scrollIntoView();
+
+          const behavior = 'smooth';
+          const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+          if (mediaQuery.matches) {
+            behaviour = 'auto';
+          }
+          element.scrollIntoView({ behavior });
+
           if (window.MathJax) {
             window.MathJax.typeset();
           }

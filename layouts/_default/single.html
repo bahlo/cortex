@@ -13,5 +13,5 @@
     </div>
  </div>
 {{ $pagejs := resources.Get "js/page.js" }}
-<script src="{{$pagejs.Permalink}}" type="text/javascript"></script>
+<script src="{{ $pagejs.Permalink }}" type="text/javascript"></script>
 {{end}}

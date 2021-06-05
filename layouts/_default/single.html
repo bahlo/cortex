@@ -1,6 +1,7 @@
 {{define "main"}}
 <div class="grid">
   <div class="page" data-level="1">
+    <h1 class="collapsed-title">{{ .Title }}</h1>
     <div class="content">
       <a href="{{ .Permalink}}" alt="{{ .Title }}" class="permalink"><h1>{{ .Title }}</h1></a>
       {{ .Content }}

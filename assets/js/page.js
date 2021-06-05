@@ -61,6 +61,7 @@ function fetchNote(href, level) {
           if (window.MathJax) {
             window.MathJax.typeset();
           }
+          updateCollapsedState();
         }.bind(null, element, level),
         10
       );
@@ -134,4 +135,36 @@ window.onload = function () {
       fetchNote(stacks[i], i + 1);
     }
   }
+
+  document.querySelector('.grid')
+    .addEventListener('scroll', debounce(updateCollapsedState), { passive: true });
 };
+
+// The debounce function receives our function as a parameter
+// Thanks to https://css-tricks.com/styling-based-on-scroll-position/
+const debounce = (fn) => {
+  let frame;
+  return (...params) => {
+    if (frame) { 
+      cancelAnimationFrame(frame);
+    }
+    frame = requestAnimationFrame(() => {
+      fn(...params);
+    });
+  } 
+};
+
+function updateCollapsedState() {
+  const pages = document.querySelectorAll('.page');
+  const width = pages[0].offsetWidth;
+  const titleWidth = 40; // px
+
+  for (let i = 0; i < pages.length; i++) {
+    const collapsed = (width * (i+1)) < pages[i].offsetLeft + titleWidth;
+    if (collapsed) {
+      pages[i].classList.add("collapsed");
+    } else {
+      pages[i].classList.remove("collapsed");
+    }
+  }
+}

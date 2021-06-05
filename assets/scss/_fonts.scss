@@ -4,16 +4,7 @@
 	font-weight: 400;
 	font-stretch: normal;
 	font-style: normal;
-	src: url('/fonts/iosevka-regular.woff2') format('woff2'), url('/fonts/iosevka-regular.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Iosevka Web';
-	font-display: swap;
-	font-weight: 700;
-	font-stretch: normal;
-	font-style: normal;
-	src: url('/fonts/iosevka-bold.woff2') format('woff2'), url('/fonts/iosevka-bold.ttf') format('truetype');
+	src: url('/fonts/iosevka-regular.woff2') format('woff2');
 }
 
 @font-face {
@@ -22,16 +13,25 @@
 	font-weight: 400;
 	font-stretch: normal;
 	font-style: italic;
-	src: url('/fonts/iosevka-italic.woff2') format('woff2'), url('/fonts/iosevka-italic.ttf') format('truetype');
+	src: url('/fonts/iosevka-italic.woff2') format('woff2');
 }
 
 @font-face {
 	font-family: 'Iosevka Web';
 	font-display: swap;
-	font-weight: 600;
-	font-stretch: expanded;
+	font-weight: 700;
+	font-stretch: normal;
 	font-style: italic;
-	src: url('/fonts/iosevka-extendedsemibolditalic.woff2') format('woff2'), url('/fonts/iosevka-extendedsemibolditalic.ttf') format('truetype');
+	src: url('/fonts/iosevka-bolditalic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Iosevka Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('/fonts/iosevka-bold.woff2') format('woff2');
 }
 
 @font-face {
@@ -39,8 +39,7 @@
   font-style:  normal;
   font-weight: 400;
   font-display: swap;
-  src: url("/fonts/Inter-Regular.woff2?v=3.18") format("woff2"),
-       url("/fonts/Inter-Regular.woff?v=3.18") format("woff");
+  src: url("/fonts/Inter-Regular.woff2?v=3.18") format("woff2");
 }
 
 @font-face {
@@ -48,8 +47,7 @@
   font-style:  italic;
   font-weight: 400;
   font-display: swap;
-  src: url("/fonts/Inter-Italic.woff2?v=3.18") format("woff2"),
-       url("/fonts/Inter-Italic.woff?v=3.18") format("woff");
+  src: url("/fonts/Inter-Italic.woff2?v=3.18") format("woff2");
 }
 
 @font-face {
@@ -57,14 +55,13 @@
   font-style:  normal;
   font-weight: 700;
   font-display: swap;
-  src: url("/fonts/Inter-Bold.woff2?v=3.18") format("woff2"),
-       url("/fonts/Inter-Bold.woff?v=3.18") format("woff");
+  src: url("/fonts/Inter-Bold.woff2?v=3.18") format("woff2");
 }
+
 @font-face {
   font-family: 'Inter';
   font-style:  italic;
   font-weight: 700;
   font-display: swap;
-  src: url("/fonts/Inter-BoldItalic.woff2?v=3.18") format("woff2"),
-       url("/fonts/Inter-BoldItalic.woff?v=3.18") format("woff");
+  src: url("/fonts/Inter-BoldItalic.woff2?v=3.18") format("woff2");
 }

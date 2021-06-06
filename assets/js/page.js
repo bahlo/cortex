@@ -154,7 +154,7 @@ function updateCollapsedState() {
       pages[i].classList.remove("collapsed");
     }
 
-    if (offsetWidth < collapsedWidth + 8) {
+    if (offsetWidth < collapsedWidth + 2) {
       pages[i].classList.add("collapsing");
     } else {
       pages[i].classList.remove("collapsing");

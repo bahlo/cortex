@@ -23,7 +23,6 @@ a {
   text-decoration: none;
   cursor: pointer;
   color: var(--link-color);
-  border-bottom: 1px solid var(--link-underline-color);
 }
 
 a.active {
@@ -60,6 +59,7 @@ pre {
   overflow-x: scroll;
   flex-grow: 1;
   height: calc(100% - 47px); // 47px = header height
+  background: var(--grid-bg);
 }
 
 .page {

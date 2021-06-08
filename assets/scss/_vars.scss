@@ -1,12 +1,16 @@
 :root {
+  --pink: #fe8f8d;
+  --dark-pink: #df4745;
+
   --fg: #111;
-  --bg: #fafafc;
+  --bg: var(--pink);
   --header-bg: #fff;
   --page-bg: #fff;
+  --grid-bg: #fafafc;
   --code-bg: #fff;
   --border-color: #eee;
-  --link-color: var(--fg);
-  --link-underline-color: #fe8f8d;
+  --link-color: var(--dark-pink);
+  --backlink-color: var(--link-color);
   --active-link-background-color: #eee;
   --shadow-color: rgba(0, 0, 0, 0.1);
 }
@@ -15,11 +19,12 @@
   /* Override for dark mode */
   :root {
     --fg: #eee;
-    --bg: #111;
+    --grid-bg: #111;
     --code-bg: #2e2a31;
     --header-bg: #222;
     --page-bg: #222;
     --border-color: #333;
+    --link-color: var(--pink);
     --shadow-color: rgba(0, 0, 0, 0.2);
     --active-link-background-color: #444;
   }

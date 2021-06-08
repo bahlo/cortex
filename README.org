@@ -1,3 +1,11 @@
-#+TITLE: Cortex Theme
+#+title: Cortex Theme
 
-Theme for my braindump. Currently largely copied from [[https://github.com/azlen/azlen.me/][azlen.me]].
+Theme for [Arnes notes](https://notes.arne.me). Currently largely copied from [[https://github.com/jethrokuan/cortex][jethrokuan/cortex]].
+
+* Icons
+
+The icon and favicon is [[https://www.flaticon.com/free-icon/brainstorm_1787077][Brainstorm free icon]]. 
+I have a license but if you plan to use this repository make sure to either buy 
+a license or give attribution.
+
+

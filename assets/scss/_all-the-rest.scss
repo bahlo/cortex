@@ -23,6 +23,7 @@ a {
   text-decoration: none;
   cursor: pointer;
   color: var(--link-color);
+  border-bottom: 1px solid var(--link-underline-color);
 }
 
 a.active {

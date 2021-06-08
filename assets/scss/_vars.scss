@@ -5,9 +5,9 @@
   --page-bg: #fff;
   --code-bg: #fff;
   --border-color: #eee;
-  --link-color: rgb(23, 173, 152);
-  --backlink-color: rgba(23, 173, 152, 0.75);
-  --active-link-background-color: rgba(23, 173, 152, 0.15);
+  --link-color: var(--fg);
+  --link-underline-color: #fe8f8d;
+  --active-link-background-color: #eee;
   --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
